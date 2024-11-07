@@ -3,9 +3,9 @@
 This is a Spring Boot application that provides a REST API for managing device hierarchy. The application supports the following operations:
 
 - List all devices, sorted by device type (Gateway > Switch > Access Point).
-- Retrieve all device trees (for root devices).
+- Retrieving all registered network device topology.
 - Retrieve a device by its MAC address.
-- Get a tree structure of devices starting from a specific device.
+- Retrieving network device topology starting from a specific device.
 - Add a new device.
 - Update an existing device by MAC address.
 - Delete a device by MAC address.
@@ -114,7 +114,7 @@ The following endpoints are available in the API:
 
   `204 No Content` if the device is deleted successfully.
 
-#### 5. **Get a device tree by MAC address**
+#### 5. **Retrieving network device topology starting from a specific device**
 
 - **URL**: `/api/devices/topology/{macAddress}`
 - **Method**: `GET`
@@ -122,7 +122,7 @@ The following endpoints are available in the API:
 
   A tree structure of devices starting from the given device.
 
-#### 6. **Get all device trees (for root devices)**
+#### 6. **Retrieving all registered network device topology**
 
 - **URL**: `/api/devices/topology`
 - **Method**: `GET`
@@ -140,7 +140,7 @@ The following endpoints are available in the API:
 
 ### Unit Tests
 
-The project includes unit tests for both the `DeviceService` and `DeviceController`. The tests use JUnit 5 and Mockito for mocking dependencies.
+The project includes unit tests for the `DeviceService`. The tests use JUnit 5 and Mockito for mocking dependencies.
 
 To run the tests, use the following command:
 
